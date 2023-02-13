@@ -66,7 +66,7 @@ int dns_create_question(dns_question* question,const char* hostname){
     }
     question->length=strlen(hostname)+2;
     question->qtype=htons(1);//查询类型，（1表示：由域名获得 IPv4 地址）
-    question->qclass=htons(1);//通常为 1，表明是 Internet 数据
+    question->qclass=htns(1);//通常为 1，表明是 Internet 数据
 
     //hostname->name
     const char delim[2]=".";//分隔符,末尾补个'\0'
